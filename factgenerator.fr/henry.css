@@ -1,0 +1,53 @@
+/*COULEURS ET GRAS*/
+.violet {
+    background-color:#74375e;
+}
+
+.rouge {
+    background-color:#9a373d;
+}
+
+.moutarde {
+    background-color:#dd8037;
+}
+
+.blanc {
+    color: white;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+/*MARGE*/
+.col-3 {
+    text-align: center;
+}
+
+.col-3.violet,h5 {
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    margin-top: 30px;
+}
+
+.marge {
+    margin-bottom: 100px;
+}
+
+.aligner-texte {
+    text-align: right;
+}
+
+
+/*TAILLE IMAGE*/
+img {
+    width: 32px;
+    height: 32px;
+}
+
+div.row:nth-child(3) > div:nth-child(3) > img:nth-child(1) {
+    width: 200px;
+    height: 30px;
+}
