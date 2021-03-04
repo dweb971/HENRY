@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>formation.com - Profil</title>
+  </head>
+  <body>
+    <div class="container-sm">
+      <div class="row">
+        <div class="col-2 logo">
+          <a href="index.html"><img src="image/logo.png" alt="le logo"></a>
+        </div>
+        <div class="col">
+          <ul class="nav nav-h">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="fas fa-cart-arrow-down"></i></a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="nav-link dropdown" href="#" role="button" id="deroulanta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="src_sources/les_images/photo_profil_connecte.png" alt="photo de Profil du menu">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="deroulanta">
+                  <a class="dropdown-item" href="#">Courses</a>
+                  <a class="dropdown-item" href="#">Orders</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="#">Log-Out</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-yellow" href="#">Be A Contributor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-sm">
+      <a href="#" class="noir">
+        <img src="src_sources/les_images/fleche.png" alt="flèche">
+        Cart
+      </a>
+    </div>
+    <div class="container-sm" id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+
+          </div>
+          <div class="col-6">
+            <p class="centre gras marge">Settings</p>
+            <div>
+              <ul class="nav nav-h">
+              <li class="nav-item">
+                <a class="nav-link active noir" href="#">Basic Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link noir" href="#">Card Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link noir" href="#">Announcement</a>
+              </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-4">
+
+          </div>
+          <div class="col-4">
+            <form action="" method="post">
+              <div class="centre">
+                <a href="#" class="noir">
+                  <img src="src_sources/les_images/photo_profil.png" alt=""> <br>
+                  Click to Upload Image
+                </a>
+              </div>
+              <input type="text" class="form-control arrondi" id="FullName" name="Nom" placeholder="Full name">
+              <p class="error" id="ErreurNom"></p>
+              <input type="text" class="form-control arrondi" id="Country" name="Pays" placeholder="Country / Region">
+              <p class="error" id="ErreurPays"></p>
+              <input type="text" class="form-control arrondi" id="StreetAddress" name="Addresse" placeholder="Street Address">
+              <p class="error" id="ErreurAddresse"></p>
+              <input type="text" class="form-control arrondi" id="City" name="Ville" placeholder="City">
+              <p class="error" id="ErreurVille"></p>
+              <input type="text" class="form-control arrondi" id="Region" name="Region" placeholder="State / Province / Region">
+              <p class="error" id="ErreurRegion"></p>
+              <input type="text" class="form-control arrondi" id="PostalCode" name="CodePostal" placeholder="Zip / Postal code">
+              <p class="error" id="ErreurCodePostal"></p>
+              <input type="tel" class="form-control arrondi" id="Mobile" name="Tel" placeholder="Mobile">
+              <p class="error" id="ErreurMobile"></p>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Set as default</label>
+              </div>
+            </form>
+            <a class="nav-link btn btn-yellow" href="#" id="Valider">Save and Ship To This Adress</a>
+          </div>
+          <div class="col-4">
+            
+          </div>
+        </div>
+      </div>
+      
+    </div> <!--end container slider for width -->
+
+    <footer>
+      <div class="container-sm">
+        <div class="row">
+          <div class="col-sm">
+            <div class="logoFooter"></div>
+              Semat Africa is an online education <br>
+              platform that delivers video courses,
+              programs and resources.
+            <img src="src_sources/les_images/icones_sociaux.png" alt="réseaux sociaux">
+          </div>
+          <div class="col-sm">
+            <p class="gras blanc">Quicklinks</p> <br> <br>
+            <ul>
+              <li class="enlever-puces">
+                <a href="http://" class="blanc">Home</a>
+              </li>
+              <li class="enlever-puces">
+                <a href="http://" class="blanc">Courses</a>
+              </li>
+              <li class="enlever-puces">
+                <a href="http://" class="blanc">About Us</a>
+              </li>
+              <li class="enlever-puces">
+                <a href="http://" class="blanc">Contact Us</a>
+              </li>
+              <li class="enlever-puces">
+                <a href="http://" class="blanc">Become A Contributor</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <p class="gras blanc">Contact Us</p> <br> <br>
+            (+55)254. 254. 254<br>
+            Info@semajafrica.com<br>
+            Helios Tower 75 Tam Trinh Hoang<br>
+            Mai - Ha Noi - Viet Nam
+          </div>
+          <div class="col-sm">
+            <br><br><br><br>
+            Terms and conditions<br>
+            Faq
+          </div>
+        </div>
+      </div>
+      <div class="fond-noir">
+        <div class="container-sm">
+          <div class="row">
+            <div class="col-9">
+              <p class="blanc gras">
+                All Right Reserved | GOGE AFRICA 2019
+              </p>
+            </div>
+            <div class="col-3">
+              <p class="blanc gras">Privacy policy Site Credit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/265b7e0fa5.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
