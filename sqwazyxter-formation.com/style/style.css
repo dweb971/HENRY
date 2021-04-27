@@ -1,0 +1,320 @@
+/*HEAD*/
+
+.logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 75px;
+}
+
+header{
+    background-color: #4F81BC;
+}
+
+
+/*NAVIGATION*/
+
+nav {
+    margin-left: 500px;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    height: 50px;
+    padding: 0px;
+}
+
+nav ul li {
+    width: 150px;
+    list-style: none;
+    transition: border-bottom 300ms ease-in-out, padding-bottom 300ms ease-in-out;
+}
+
+nav ul li a {
+    color: white;
+    width: 150px;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: #4f359b;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid #c8c8c8;
+    border-top-left-radius: 15px;
+}
+
+nav ul li a:hover {
+    color: #c8c8c8;
+    text-decoration: none;
+}
+
+
+
+
+/*CONTENT*/
+
+h1{
+    text-align: center;
+}
+
+.marge-bouton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bouton-connection{
+    background-color: white;
+    float: right;
+    margin-top: 75px;
+    margin-right: 10px;
+}
+
+
+/*CALENDRIER*/
+
+table.table tbody tr td:hover{
+    background-color: #c8c8c8;
+}
+
+.date_jour {
+    background-color: gray;
+    font-weight: bold;
+}
+
+table.table {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form.heure {
+    margin-bottom: 40px;
+}
+
+table.table tr th {
+    width: 88px;
+    background-color: #4F81BC;
+    color: white;
+}
+
+.width {
+    vertical-align: bottom;
+    border-bottom: 1px solid black;
+}
+
+
+.agendaForm{
+    border: 1px solid red;
+}
+/* Accompagnement*/
+.h3{
+    margin-top: 50px;
+    margin-left: 280px;
+    
+}
+
+.h5{
+    margin-top: 50px;
+    margin-left: 135px;
+    font-size: 10px;
+}
+.tailleImg{
+    width: 250px;
+    height: 250px;
+}
+
+.txtF{
+    margin-left: 65px;
+    margin-top: 15px;
+}
+
+/* bar Progress*/
+label {
+    padding-right: 10px;
+    font-size: 1rem;
+}
+
+.bgc{
+    background-color:#e6e8e6 ;
+}
+/* page formation détail*/
+.txtDetailF{
+    margin-left: 150px;
+}
+
+
+/* fil d'arriane*/
+
+div ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    display:inline;
+  }
+  
+  /* fil d'arriane*/
+
+div ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    display:inline;
+  }
+  
+  .ariane:before{
+    content: ">\00a0";
+  } 
+  
+  .margin{
+    margin-top: 50px;
+    margin-left: 70px;
+    
+  }
+  
+  .btnPlace{
+    margin-top: 40px;
+   margin-left: 280px;
+  }
+  
+  .margin{
+    margin-top: 50px;
+    margin-left: 70px;
+    
+  }
+  
+  .btnPlace{
+    margin-top: 40px;
+   margin-left: 280px;
+  }
+
+  /* PAGE ACHAT*/
+
+
+
+
+
+.placeStep1{
+    margin-left: 130px;
+  }
+  
+  .margin2{
+    margin-top: 50px;
+    margin-left: 50px;
+    
+  }
+  
+  
+  .titleAchat{
+    margin-left: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .imgPaiement{
+    height: 145px;
+    width: 300px;
+  }
+  
+  .down{
+    margin-bottom: 150px;
+  }
+
+  
+
+
+  .marge-accueil{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.btnPlace{
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+/*FOOTER**/
+
+.centre{
+    text-align: center;
+}
+
+footer{
+    background: #1c1f33;
+    color: white;
+}
+
+.marge-accueil{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+/*RÉSERVATION**/
+
+
+.tailleImg2{
+    height: 150px;
+    width: 150px;
+}
+
+.marginLonImg{
+    margin-left: 50px;
+}
+.style-lien{
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+
+
+/*catalogue**/
+
+.taille-image{
+    max-width: 250px;
+    height: 250px;
+}
+
+
+/* javascript error champs frm*/
+
+.errorEmpty {
+    background-color:  #fcbbcf;
+}
+.error {
+    font-size: .8em;
+    font-weight: bold;
+    color: red;
+}
+.off {
+    display: none;
+
+}
+.one {
+    display: block;
+    }
+#erreur {
+margin-left: 130px;
+}
+
+
+.downed{
+    margin-bottom: 520px;
+}
+
+
+/* txt area*/
+
+.downe{
+    margin-bottom: 50px;
+  }
