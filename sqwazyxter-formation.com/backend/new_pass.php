@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <title>CONNEXION - <?php echo $page; ?></title>
+    <title>DEMANDE NOUVEAU MOT DE PASSE - <?php echo $page; ?></title>
 </head>
 
 <body>
@@ -18,36 +18,16 @@
         <div class="row">
             <div class="col-md-12">
                 <form method="POST" action="validation.php">
-                <div class="form-group">
-                        <label for="">NOM : *</label>
-                        <input type="text" class="form-control" id="" aria-describedby="" name="email" placeholder="NOM" minlength="1" maxlength="1000" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Prenom : *</label>
-                        <input type="text" class="form-control" id="" aria-describedby="" name="prenom" placeholder="Prenom" minlength="2" maxlength="1984" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Téléphone : *</label>
-                        <input type="tel" class="form-control" id="" aria-describedby="" name="telephone" placeholder="Téléphone" minlength="10" maxlength="15" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Date de naissance : *</label>
-                        <input type="date" class="form-control" id="" aria-describedby="" name="naissance" placeholder="Date de naissance" minlength="12" maxlength="12" required>
-                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="email" minlength="7" maxlength="5977" required>
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="password" minlength="6" maxlength="10" required>
-                    </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <input type="hidden" name="nomForm" value="profil" >
+                    <input type="hidden" name="nomForm" value="newPass" >
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

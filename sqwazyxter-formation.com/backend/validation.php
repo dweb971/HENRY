@@ -1,4 +1,5 @@
 <?php
+session_start();
 ini_set('display_errors', 1);
 
 //autoloader
@@ -28,6 +29,16 @@ try {
     case 'profil':
         # code...
         echo "profil";
+        break;
+
+    case 'newPass':
+        # code...
+        $config->new_pass($_POST["email"]);
+        break;
+
+    case 'passOk':
+        # code...
+        $config->update_pass($_POST);
         break;
      
     default:
