@@ -2,14 +2,13 @@
 class Reservation
 {
     //propriétés
-    private $_datereservation;
     private $_nom;
     private $_prenom;
     private $_periode;
     private $_salle;
+    private $_datereservation;
     private $_DBConnect;
     private $_reservation;
-
 
 
     //méthodes
@@ -35,7 +34,7 @@ class Reservation
         VALUES ('".$this->get_nom()."', '".$this->get_prenom()."', '".$this->get_periode()."', '".$this->get_salle()."', '".$this->get_datereservation()."', '".$dates."', '".$dates."')";
 
         $dbh = $this->get_DBConnect()->query($requete);
-        print_r($dbh);
+        echo ('Informations envoyés!');
 
     }
 

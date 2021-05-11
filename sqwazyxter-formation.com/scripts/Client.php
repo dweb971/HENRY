@@ -36,8 +36,7 @@ class Client
         VALUES ('".$this->get_nom()."', '".$this->get_prenom()."', '".$this->get_tel()."', '".$this->get_email()."', '".$this->get_raison()."', '".$this->get_daterdv()."', '".$this->get_heure()."', '".$dates."', '".$dates."')";
 
         $dbh = $this->get_DBConnect()->query($requete);
-        print_r($dbh);
-    }
+        echo ('Rendez-vous enregistré !');    }
 
     public function insert_data($pdo){
         if(preg_match('/[0-9]+/', $this->get_tel) == true){

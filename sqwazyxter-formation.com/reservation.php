@@ -24,8 +24,8 @@
                 <div class="col-4">
                     <div class="form-group">
                         Nom (*) :
-                        <input type="text" class="form-control" id="nomForm" placeholder="NOM" name="nomForm" maxlength="1000"
-                            minlength="1" required>
+                        <input type="text" class="form-control" id="nomForm" placeholder="NOM" name="nomForm"
+                            maxlength="1000" minlength="1" required>
                         <div class="valid-feedback">
                             Bon !
                         </div>
@@ -35,8 +35,8 @@
                     </div>
                     <div class="form-group">
                         Prenom (*) :
-                        <input type="text" class="form-control" id="prenomForm" placeholder="Prénom" name="prenomForm" maxlength="1984"
-                            minlength="2" required>
+                        <input type="text" class="form-control" id="prenomForm" placeholder="Prénom" name="prenomForm"
+                            maxlength="1984" minlength="2" required>
                         <div class="valid-feedback">
                             Bon !
                         </div>
@@ -160,36 +160,48 @@
                         </tr>
                     </tbody>
                 </table>
-                <h4 class="placeStep1">Réserver pour :</h4>
-                <div class="form-group">
-                    <div class="placeStep1 form-check">
-                        <input class="form-check-input" type="radio" name="periodeFrm" id="exampleRadios1"
-                            value="matin">
-                        <label class="form-check-label" for="exampleRadios1">
-                            La matinée
-                        </label>
-                    </div>
-                    <div class="placeStep1 form-check">
-                        <input class="form-check-input" type="radio" name="periodeFrm" id="exampleRadios2"
-                            value="apresmidi">
-                        <label class="form-check-label" for="exampleRadios2">
-                            L'après-midi
-                        </label>
-                    </div>
-                    <div class="placeStep1 form-check">
-                        <input class="form-check-input" type="radio" name="periodeFrm" id="exampleRadios2"
-                            value="journee">
-                        <label class="form-check-label" for="exampleRadios2">
-                            La journée
-                        </label>
-                    </div>
+                <select class="custom-select" id="heure" required>
+                    <option value="" selected>Choisir une heure de début</option>
+                    <option value="7:00">7h00</option>
+                    <option value="7:40">7h40</option>
+                    <option value="8:00">8h00</option>
+                    <option value="8:40">8h40</option>
+                    <option value="9:00">9h00</option>
+                    <option value="9:40">9h40</option>
+                    <option value="10:00">10h00</option>
+                    <option value="10:40">10h40</option>
+                    <option value="11:00">11h00</option>
+                    <option value="11:40">11h40</option>
+                    <option value="14:00">14h00</option>
+                    <option value="14:30">14h30</option>
                     <div class="valid-feedback">
-                        Bon !
+                        Looks good!
                     </div>
                     <div class="invalid-feedback">
-                        Indiquez la periode !
+                        Indiquez une heure de début!
                     </div>
-                </div>
+                </select>
+                <select class="custom-select" id="heure" required>
+                    <option value="" selected>Choisir une heure de fin</option>
+                    <option value="7:00">7h00</option>
+                    <option value="7:40">7h40</option>
+                    <option value="8:00">8h00</option>
+                    <option value="8:40">8h40</option>
+                    <option value="9:00">9h00</option>
+                    <option value="9:40">9h40</option>
+                    <option value="10:00">10h00</option>
+                    <option value="10:40">10h40</option>
+                    <option value="11:00">11h00</option>
+                    <option value="11:40">11h40</option>
+                    <option value="14:00">14h00</option>
+                    <option value="14:30">14h30</option>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Indiquez une heure de fin!
+                    </div>
+                </select>
                 <div>
                     <input type="hidden" name="rdvFrm" value="" id="rdvFrm" required>
                     <input type="hidden" name="action" value="rdv">

@@ -17,6 +17,55 @@ class Config {
         
     }
 
+    public function ajouter_user(array $data){
+        $this->set_nom($this->nettoyer(strtoupper($data["nom"])));
+        $this->set_prenom($this->nettoyer(ucfirst($data["prenom"])));
+        $this->set_tel($this->nettoyer($data["telephone"]));
+        $this->set_naissance($this->nettoyer($data["naissance"]));
+        $this->set_login($this->nettoyer(strtolower($data["email"])));
+        $this->set_pass($this->nettoyer(password_hash($data["password"], PASSWORD_DEFAULT)));
+        //echo $this->get_pass();
+
+        //insert table profil puis user
+
+        //print_r($_SESSION);
+
+        if(!isset($_SESSION["login"])){
+
+        }
+        else{
+            $dates = date("Y-m-d H:i:s"); //heure locale de la machine
+            $reqI = "INSERT INTO profil (nom, prenom, telephone, date_naissance, dateAdd, dateUpdate)
+            VALUES ('".$this->get_nom()."', '".$this->get_prenom()."', '".$this->get_tel()."', '".$this->get_naissance()."', '".$dates."', '".$dates."')";
+            $dbh = $this->get_connectDB()->query($reqI);
+            $idprofil = $this->get_connectDB()->lastInsertId();
+
+            if($idprofil < 0){
+                // error
+
+            }
+            else{
+                // insert into user
+                $reqU = "INSERT INTO user (idprofil, login, password, dateAdd, dateUpdate)
+                VALUES ('".$idprofil."', '".$this->get_login()."', '".$this->get_pass()."', '".$dates."', '".$dates."')";
+                $dbh = $this->get_connectDB()->query($reqU);
+
+                if($dbh->rowCount() === 1){
+                    //insert ok
+                    $_SESSION["msg"] = "<p>L'ajout user $idprofil est réussi.</p>";
+                    //redirection vers page login.php
+                    /* Ceci produira une erreur. Notez la sortie ci-dessus,
+                    * qui se trouve avant l'appel à la fonction header() */
+                    header('Location: https://'.$_SERVER["HTTP_HOST"].'/backend/index.php?m=use');
+                    exit;
+                }
+                else{
+
+                }
+            }
+        }
+    }
+
     public function update_pass(array $data){
         $this->set_login($this->nettoyer(strtolower($data["email"])));
         $log = $this->get_login();

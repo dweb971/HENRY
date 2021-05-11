@@ -172,7 +172,7 @@
                                 Looks good!
                             </div>
                             <div class="invalid-feedback">
-                                Indiquez votre nom!
+                                Indiquez une heure!
                             </div>
                         </select>
                         <div class="form-check">

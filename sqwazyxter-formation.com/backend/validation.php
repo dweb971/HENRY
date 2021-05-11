@@ -19,11 +19,15 @@ try {
 
  $db = new Connect();
  $config = new Config($db);
-
  switch ($_POST["nomForm"]) {
     case 'login':
         # code...
         $config->login($_POST);
+        break;
+
+    case 'add':
+        # code...
+        $config->ajouter_user($_POST);
         break;
 
     case 'profil':
