@@ -1,5 +1,5 @@
 <form action="POST" id="H">
-    <select class="custom-select" id="heure" required >
+    <select class="custom-select" id="heure" required>
         <option value="" selected>Choisir une heure</option>
         <option value="7:00">7h00</option>
         <option value="7:40">7h40</option>
@@ -20,13 +20,59 @@
 </form>
 
 <script>
-    // verifie date et heure deja prise
+// verifie date et heure deja prise
 
-    // liste deroulante
-    let listeH = document.getElementById("heure");
+// liste deroulante
+let listeH = document.getElementById("heure");
+let httpRequest;
+//ecouteur type change
+listeH.addEventListener("change", function() {
+    let dateRDV = document.getElementById("rdvFrm").value;
+    let heureRDV = this.value;
+    let info = document.getElementById("errorDH");
 
-    //ecouteur type change
-    listeH.addEventListener("change",function(){
+    httpRequest = new XMLHttpRequest();
+    //requete vers serveur
+    httpRequest.open('POST', 'https://karu-consult.com/traitement.php');
+    //changer le type MIME de la requete pour methode POST
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    });
+
+    httpRequest.send("rdvFrm=" + encodeURIComponent(dateRDV) + "&heureFrm=" + encodeURIComponent(heureRDV));
+
+    // traitement reponse serveur
+    httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            // tout va bien, la réponse a été reçue
+            console.log(httpRequest.responseText);
+
+            if (httpRequest.status === 200) {
+                // parfait !
+
+                if(httpRequest.responseText != ''){
+                    console.log(httpRequest.responseText);
+                    info.classList.remove("errorDH");
+                    listeH.classList.add("is-invalid");
+                    info.innerHTML = httpRequest.responseText;
+                }
+                else{
+
+                }
+            } else {
+                // il y a eu un problème avec la requête,
+                // par exemple la réponse peut être un code 404 (Non trouvée)
+                // ou 500 (Erreur interne au serveur)
+
+                // cache bloc erreur
+                info.classList.add("errorDH");
+                listeH.classList.remove("is-invalid");
+
+
+            }
+
+        } else {
+            // pas encore prête
+        }
+    };
+});
 </script>

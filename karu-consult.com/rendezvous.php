@@ -75,8 +75,8 @@ include("includes/head.php");
             <?php include("includes/forms/heure.php");  ?>
         </div>
         <div class="col-3">
-            <div class="alert alert-danger errorDH" role="alert">
-                
+            <div class="alert alert-danger errorDH" role="alert" id="errorDH">
+
             </div>
         </div>
     </div>
@@ -88,8 +88,8 @@ include("includes/head.php");
         </div>
         <div class="col-6">
             <?php
-                        include("includes/forms/patient.php");
-                    ?>
+                include("includes/forms/patient.php");
+            ?>
         </div>
         <div class="col-3">
 

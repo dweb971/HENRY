@@ -107,7 +107,20 @@ class Patient
 
     public function cherche_date_heure($date, $heure){
         // affiche date/heure
-        echo "le rdv est pour le $date à $heure";
+        // echo "le rdv est pour le $date à $heure";
+
+        //cherche date/heure dans table rendez_vous
+        $requete = "SELECT date_rdv, heure_rdv FROM rendez_vous
+        WHERE date_rdv = '".$date."' AND heure_rdv = '".$heure."' ";
+
+        $reqSD = $this->get_DBConnect()->prepare($requete);
+        $resultat = $reqSD->execute();
+
+        //si 1 résultat
+        if($reqSD->rowCount() != 0){
+            # date pas dispo
+            echo "<p>Rendez-vous impossible, choisir une autre date ou une autre heure!</p>";
+        }
     }
 
 
