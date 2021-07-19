@@ -1,11 +1,16 @@
 /*HEAD*/
 
-.logo{
+.logoh{
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 75px;
+}
+.logo{
+    height: 32px;
+    width: 32px;
+    margin-left: 15px;
 }
 
 header{
@@ -66,14 +71,6 @@ h1{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-.bouton-connection{
-    background-color: white;
-    float: right;
-    margin-top: 75px;
-    margin-right: 10px;
-}
-
 
 /*CALENDRIER*/
 
@@ -202,7 +199,9 @@ div ul li{
 
 .placeStep1{
     margin-left: 130px;
+   
   }
+  
   
   .margin2{
     margin-top: 50px;
@@ -277,12 +276,23 @@ a:hover{
 }
 
 
+.moveR{
+    margin-left: 150px;
+}
+
+
+
+
 
 /*catalogue**/
 
 .taille-image{
     max-width: 250px;
     height: 250px;
+}
+.taille-image2{
+    max-width: 32px;
+    height: 32px;
 }
 
 
@@ -318,3 +328,39 @@ margin-left: 130px;
 .downe{
     margin-bottom: 50px;
   }
+/* connexion btn*/
+  .bouton-connection{
+    background-color: white;
+    float: right;
+    margin-top: 75px;
+    margin-right: 10px;
+}
+
+
+.taille-icone{
+    width: 2px;
+    height: 2px;
+}
+
+
+#sqz{
+   
+    font-size: 100px;
+    float:right;
+    margin-right: 90px;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    
+}
+
+
+
+/* page mon profil*/
+
+
+#btn{
+    margin-bottom: 30px;
+}
+
+/* police d'ecriture*/
+

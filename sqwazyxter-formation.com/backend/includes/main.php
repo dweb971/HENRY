@@ -13,28 +13,32 @@
         </div>
       </div>
 
-      <?php
-
-        $m = $_GET["m"];
-
-        switch ($m) {
-          case 'exo':
-            # code...
+        <?php
             print_r($_GET);
-            break;
-          
-          case 'use':
-            # code...
-            include("mains/user.php");
-            break;
 
-          default:
-            # code...
-
-            break;
-        }
-      ?>
+                $m = $_GET["m"];
 
 
+
+            switch ($m) {
+                case 'exo':
+                   print_r($_GET);
+                    break;
+
+                 case 'use':
+                   include ("mains/user.php");
+                    break;
+                
+                default:
+                    # code...
+
+
+                   
+                    break;
+            }
+        ?>
+
+
+      
       
     </main>

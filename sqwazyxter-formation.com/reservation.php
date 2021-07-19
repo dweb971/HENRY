@@ -1,4 +1,14 @@
-<?php include("includes/header.php"); ?>
+<?php 
+    session_start();
+   
+if(isset($_SESSION['user']))
+{
+    require_once 'includes/headerOnline.php';   
+}
+else {
+    require_once 'includes/header.php'; 
+}
+?>
 <title>Sqwazyxter-formation - Réservation</title>
 </head>
 
@@ -42,6 +52,28 @@
                         </div>
                         <div class="invalid-feedback">
                             Indiquez votre prénom !
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        Email (*) :
+                        <input type="email" class="form-control" id="emailForm" placeholder="Email" name="email"
+                            maxlength="1000" minlength="1" required>
+                        <div class="valid-feedback">
+                            Bon !
+                        </div>
+                        <div class="invalid-feedback">
+                            Indiquez votre Email !
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        Numéro Téléphone (*) :
+                        <input type="tel" class="form-control" id="telForm" placeholder="Téléphone" name="tel"
+                            maxlength="1000" minlength="1" required>
+                        <div class="valid-feedback">
+                            Bon !
+                        </div>
+                        <div class="invalid-feedback">
+                            Indiquez votre Numéro de téléphone !
                         </div>
                     </div>
                 </div>
@@ -100,6 +132,8 @@
                             <th> Vendredi </th>
                             <th> Samedi </th>
                             <th> Dimanche </th>
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -112,6 +146,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
                         </tr>
                         <tr>
                             <td></td>
@@ -121,6 +156,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
                         </tr>
                         <tr>
                             <td></td>
@@ -130,6 +166,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
                         </tr>
                         <tr>
                             <td></td>
@@ -139,6 +176,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
                         </tr>
                         <tr>
                             <td></td>
@@ -148,6 +186,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
                         </tr>
                         <tr>
                             <td></td>
@@ -157,10 +196,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
                         </tr>
                     </tbody>
                 </table>
-                <select class="custom-select" id="heure" required>
+                <select class="custom-select" id="" required name="heureD">
                     <option value="" selected>Choisir une heure de début</option>
                     <option value="7:00">7h00</option>
                     <option value="7:40">7h40</option>
@@ -178,12 +218,12 @@
                         Looks good!
                     </div>
                     <div class="invalid-feedback">
-                        Indiquez une heure de début!
+                        Indiquez votre nom!
                     </div>
                 </select>
-                <select class="custom-select" id="heure" required>
+                <select class="custom-select" id="" name="heureF" required>
                     <option value="" selected>Choisir une heure de fin</option>
-                    <option value="7:00">7h00</option>
+
                     <option value="7:40">7h40</option>
                     <option value="8:00">8h00</option>
                     <option value="8:40">8h40</option>
@@ -199,7 +239,7 @@
                         Looks good!
                     </div>
                     <div class="invalid-feedback">
-                        Indiquez une heure de fin!
+                        Indiquez votre nom!
                     </div>
                 </select>
                 <div>
@@ -218,5 +258,31 @@
             </div>
         </div>
     </form>
+
+
+
+    <script src="js/rdv_date.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+    </script>
 
     <?php include("includes/footer.php"); ?>

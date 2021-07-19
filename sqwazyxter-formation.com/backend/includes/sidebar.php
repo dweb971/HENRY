@@ -11,7 +11,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.php?m=use">
-              <span data-feather="user"></span>
+              <span data-feather="file"></span>
               Utilisateur
             </a>
           </li>

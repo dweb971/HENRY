@@ -16,7 +16,7 @@ class Connect{
         $this->user = 'sqwazyxter';
         $this->password = 'sqwazyxter';
         $this->db = 'sqwazyxter';
-        
+
     $this->instance_db($this->host, $this->db, $this->user, $this->password);
 
     }//fin construct

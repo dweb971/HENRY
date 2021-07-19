@@ -1,8 +1,24 @@
-<?php include("includes/header.php"); ?>
+<?php 
+    session_start();
+   
+if(isset($_SESSION['user']))
+{
+    require_once 'includes/headerOnline.php';   
+}
+else {
+    require_once 'includes/header.php'; 
+}
+?>
 <title>sqwazyxter/Formation - Rendez-vous</title>
 </head>
 
 <body>
+<div class="">
+        <ul class="margin2">
+            <li><a href="index.php"> Accueil</a></li>
+            <li class="ariane">Rendez-vous</li>
+        </ul>
+    </div>
 
     <h1>RENDEZ-VOUS</h1>
     <form action="traitement.php" method="post" class="needs-validation" novalidate>
@@ -172,7 +188,7 @@
                                 Looks good!
                             </div>
                             <div class="invalid-feedback">
-                                Indiquez une heure!
+                                Indiquez votre nom!
                             </div>
                         </select>
                         <div class="form-check">
@@ -202,6 +218,29 @@
     </form>
 
 
+<script src="js/rdv_date.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                    'use strict';
+                    window.addEventListener('load', function() {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
 
 
+                </script>
     <?php include("includes/footer.php"); ?>

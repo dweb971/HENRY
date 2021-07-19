@@ -10,34 +10,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <title>CONNEXION - <?php echo $page; ?></title>
+    <title>CONNEXION - <?php echo $page; ?> </title>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form method="POST" action="validation.php">
+                <form method="post" action="validation.php">
+
                 <div class="form-group">
-                        <label for="">NOM : *</label>
-                        <input type="text" class="form-control" id="" aria-describedby="" name="email" placeholder="NOM" minlength="1" maxlength="1000" required>
+                        <label for="exampleInputEmail1">NOM : *</label>
+                        <input type="text" class="form-control" id="" aria-describedby="" name="nom" placeholder="NOM" minlength="1" maxlength="1000" required>
+                        <small id="" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                        <label for="">Prenom : *</label>
-                        <input type="text" class="form-control" id="" aria-describedby="" name="prenom" placeholder="Prenom" minlength="2" maxlength="1984" required>
+                        <label for="exampleInputEmail1">Prénom : *</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="" name="prenom" placeholder="Prénom" minlength="2" maxlength="1984" required>
+                        <small id="" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                        <label for="">Téléphone : *</label>
-                        <input type="tel" class="form-control" id="" aria-describedby="" name="telephone" placeholder="Téléphone" minlength="10" maxlength="15" required>
+                        <label for="exampleInputEmail1">Télephone</label>
+                        <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="" name="telephone" placeholder="Téléphone" minlength="10" maxlength="10" required>
+                        <small id="" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                        <label for="">Date de naissance : *</label>
-                        <input type="date" class="form-control" id="" aria-describedby="" name="naissance" placeholder="Date de naissance" minlength="12" maxlength="12" required>
+                        <label for="exampleInputEmail1">Date de Naissance</label>
+                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="" name="naissance" placeholder="Date de naissance" minlength="12" maxlength="12" required>
+                        <small id="" class="form-text text-muted"></small>
                     </div>
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="email" minlength="7" maxlength="5977" required>
-                        <small id="emailHelp" class="form-text text-muted"></small>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="" name="email" placeholder="email" minlength="7" maxlength="5977" required>
+                        <small id="" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
@@ -47,9 +53,11 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <input type="hidden" name="nomForm" value="profil" >
+
+                    <input type="hidden" name="nomForm" value="profil">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+
             </div>
         </div>
     </div>

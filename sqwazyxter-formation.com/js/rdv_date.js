@@ -1,10 +1,3 @@
-/*
-@author : Martine
-@script : Recupérer le mois et le jour pour rendez-vous
-@year : 2021
-
-*/
-
 function recup_mois_annee(mois, annee) {
 
     // evenement click sur agenda
@@ -48,6 +41,10 @@ function recup_mois_annee(mois, annee) {
 
     });
 
+
+
+
+
 }
 
 
@@ -59,4 +56,3 @@ function addStyleTD(cellule){
         cellule.style.background = "";
     }
 }
-﻿

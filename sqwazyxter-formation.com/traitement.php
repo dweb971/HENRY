@@ -25,5 +25,3 @@ if($action === 'rdv'){
     $client = new Client($db);
     $client->prise_rdv($_POST);
 }
-
-

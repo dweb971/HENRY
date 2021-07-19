@@ -4,11 +4,14 @@ class Reservation
     //propriétés
     private $_nom;
     private $_prenom;
-    private $_periode;
     private $_salle;
     private $_datereservation;
     private $_DBConnect;
     private $_reservation;
+    private $_email;
+    private $_tel;
+    private $_heureD;
+    private $_heureF;
 
 
     //méthodes
@@ -19,19 +22,22 @@ class Reservation
 
 
     public function reservation(array $data){
-
+            
         $dates = date("Y-m-d H:m:s");
 
         // affectation données
         $this->set_nom(strtoupper($this->nettoyer($data["nomForm"])));
         $this->set_prenom(ucfirst($this->nettoyer($data["prenomForm"])));
-        $this->set_periode($this->nettoyer($data["periodeFrm"]));
         $this->set_salle($this->nettoyer($data["salleFrm"]));
         $this->set_datereservation($this->nettoyer($data["rdvFrm"]));
+        $this->set_email($this->nettoyer($data["email"]));
+        $this->set_tel($this->nettoyer($data["tel"]));
+        $this->set_heureD($this->nettoyer($data["heureD"]));
+        $this->set_heureF($this->nettoyer($data["heureF"]));
 
         //requete insert
-        $requete = "INSERT INTO reservation (nom, prenom, periode, salle, rdvFrm, dateAdd, dateUpdate)
-        VALUES ('".$this->get_nom()."', '".$this->get_prenom()."', '".$this->get_periode()."', '".$this->get_salle()."', '".$this->get_datereservation()."', '".$dates."', '".$dates."')";
+        $requete = "INSERT INTO reservation (nom, prenom, salle, rdvFrm, email, tel, heureD, heureF, dateAdd, dateUpdate)
+        VALUES ('".$this->get_nom()."', '".$this->get_prenom()."', '".$this->get_salle()."', '".$this->get_datereservation()."', '".$this->get_email()."', '".$this->get_tel()."', '".$this->get_heureD()."', '".$this->get_heureF()."', '".$dates."', '".$dates."')";
 
         $dbh = $this->get_DBConnect()->query($requete);
         echo ('Informations envoyés!');
@@ -86,25 +92,6 @@ class Reservation
         return $this;
     }
 
-    /**
-     * Get the value of _periode
-     */ 
-    public function get_periode()
-    {
-        return $this->_periode;
-    }
-
-    /**
-     * Set the value of _periode
-     *
-     * @return  self
-     */ 
-    public function set_periode($_periode)
-    {
-        $this->_periode = $_periode;
-
-        return $this;
-    }
 
     /**
      * Get the value of _DBConnect
@@ -162,6 +149,86 @@ class Reservation
     public function set_datereservation($_datereservation)
     {
         $this->_datereservation = $_datereservation;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _email
+     */ 
+    public function get_email()
+    {
+        return $this->_email;
+    }
+
+    /**
+     * Set the value of _email
+     *
+     * @return  self
+     */ 
+    public function set_email($_email)
+    {
+        $this->_email = $_email;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _tel
+     */ 
+    public function get_tel()
+    {
+        return $this->_tel;
+    }
+
+    /**
+     * Set the value of _tel
+     *
+     * @return  self
+     */ 
+    public function set_tel($_tel)
+    {
+        $this->_tel = $_tel;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _heureD
+     */ 
+    public function get_heureD()
+    {
+        return $this->_heureD;
+    }
+
+    /**
+     * Set the value of _heureD
+     *
+     * @return  self
+     */ 
+    public function set_heureD($_heureD)
+    {
+        $this->_heureD = $_heureD;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _heureF
+     */ 
+    public function get_heureF()
+    {
+        return $this->_heureF;
+    }
+
+    /**
+     * Set the value of _heureF
+     *
+     * @return  self
+     */ 
+    public function set_heureF($_heureF)
+    {
+        $this->_heureF = $_heureF;
 
         return $this;
     }

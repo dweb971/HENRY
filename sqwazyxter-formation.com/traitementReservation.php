@@ -25,5 +25,3 @@ if($action === 'rdv'){
     $reservation = new Reservation($db);
     $reservation->reservation($_POST);
 }
-
-
